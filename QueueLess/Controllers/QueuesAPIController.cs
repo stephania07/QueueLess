@@ -18,9 +18,9 @@ namespace QueueLess.Controllers
         private QueueDbContext db = new QueueDbContext();
 
         // GET: api/QueuesAPI
-        public IQueryable<Queue> GetQueues()
+        public List<Queue> GetQueues()
         {
-            return db.Queues;
+            return db.Queues.ToList();
         }
 
         // GET: api/QueuesAPI/5

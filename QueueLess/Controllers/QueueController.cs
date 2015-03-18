@@ -14,9 +14,9 @@ namespace QueueLess.Controllers
             return View();
         }
 
-        public ActionResult DeleteQueue()
+        public ActionResult AddQueue()
         {
-            return PartialView("DeleteQueue");
+            return PartialView("AddQueue");
         }
     }
 }
