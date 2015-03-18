@@ -4,11 +4,11 @@
     .config(function($routeProvider){
         $routeProvider
         .when('/', {
-            templateUrl: 'Views/Queue/Index.cshtml'
+            templateUrl: 'Static/Index.html'
         })
 
             .when('/AddQueue', {
-                templateUrl: 'Views/',
+                templateUrl: 'Static/Home.html',
                 Controller: 'AddQueueController',
                 ControllerAs: 'AddCtrl'
             })

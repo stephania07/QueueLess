@@ -208,6 +208,7 @@
     <Content Include="Scripts\app\config.js" />
     <Content Include="Scripts\app\main.js" />
     <Content Include="Scripts\app\services\AddQueueController.js" />
+    <Content Include="Scripts\app\services\ShowQueueController.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
@@ -224,6 +225,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Static\Home.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

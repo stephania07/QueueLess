@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="QueueLess">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,8 +37,15 @@
         </footer>
     </div>
 
+    
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/angular-route.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/app/main.js"></script>
+    <script src="~/Scripts/app/config.js"></script>
+    <script src="~/Scripts/app/services/AddQueueController.js"></script>
+        <script src="~/Scripts/app/services/ShowQueueController.js"></script>
 </body>
 </html>
