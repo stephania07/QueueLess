@@ -226,6 +226,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Static\Home.html" />
+    <Content Include="Static\Includes\footer.html" />
+    <Content Include="Static\Includes\header.html" />
     <Content Include="Static\JQueue.html" />
     <Content Include="Static\SQueue.html" />
     <Content Include="Web.config" />

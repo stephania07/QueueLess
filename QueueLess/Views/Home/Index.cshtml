@@ -8,13 +8,7 @@
     <title>Index</title>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <span class="navbar-brand">QueueLess</span>
-            </div>
-        </div>
-    </div>
+    
     <table>
         <tr>
             <td><a href="#/JoinQueue"> Join Queue </a> ||</td>
@@ -22,6 +16,7 @@
         </tr>
     </table>
     <div class="container container-fluid-content">
+        <header ng-include="'Static/Includes/header.html'"></header>
         <div ng-view></div>
     </div>
     <script src="~/Scripts/angular.js"></script>
@@ -32,6 +27,7 @@
     <script src="~/Scripts/app/config.js"></script>
     <script src="~/Scripts/app/services/AddQueueController.js"></script>
     <script src="~/Scripts/app/services/ShowQueueController.js"></script>
+    <footer ng-include="'Static/Includes/footer.html'"></footer>
 </body>
 </html>
 
