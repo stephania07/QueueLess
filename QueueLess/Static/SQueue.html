@@ -1,0 +1,38 @@
+﻿<div class="container">
+        <h3>People on Queue</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Delete</th>
+                    <th>Service</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Email</th>
+                    <th>Registration Time</th>
+                    <th>Current Time</th>
+                    <th>Estimated Minutes</th>
+                    <th>People on Queue</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="queue in queues">
+                    <td>
+                        <button class="btn btn-info btn-lg" ng-click="deleteCustomer(queue.id)">
+                            <span class="glyphicon glyphicon-trash "></span>  Delete
+                        </button>
+                    </td>
+                    <td>{{ queue.service }}</td>
+                    <td>{{ queue.FirstName }}</td>
+                    <td>{{ queue.LastName }}</td>
+                    <td>{{ queue.PhoneNumber }}</td>
+                    <td>{{ queue.Email }}</td>
+                    <td>{{ queue.RegistrationTime }}</td>
+                    <td>{{ queue.CurrentTime }}</td>
+                    <td>{{ queue.EstimatedMinutes }}</td>
+                    <td>{{ queue.PeopleOnQueue }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+

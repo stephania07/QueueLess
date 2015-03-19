@@ -2,35 +2,20 @@
     'use strict';
     angular.module('QueueLess')
     .config(function($routeProvider){
-        $routeProvider
-        .when('/', {
+        $routeProvider.when('/', {
             templateUrl: 'Static/Index.html'
+        });
+
+        $routeProvider.when('/JoinQueue', {
+            templateUrl: 'Static/JQueue.html',
+            controller: 'AddQueueController'
         })
 
-            .when('/AddQueue', {
-                templateUrl: 'Static/Home.html',
-                Controller: 'AddQueueController',
-                ControllerAs: 'AddCtrl'
+           $routeProvider.when('/ShowQueue', {
+                templateUrl: 'Static/SQueue.html',
+                controller: 'AddQueueController'
             })
         .otherwise({redirectTo: '/home'});
       })
 }());
 
-//Eliza
-//; (function () {
-//    'use strict';
-//    angular.module('QueueLess')
-//    .config(function ($routeProvider) {
-//        $routeProvider
-//        .when('/', {
-//            templateUrl: 'Views/Queue/Index'
-//        })
-
-//            .when('/AddQueue', {
-//                templateUrl: 'Views/',
-//                Controller: 'QueueController',
-//                ControllerAs: 'QueueCtrl'
-//            })
-//        .otherwise({ redirectTo: '/' });
-//    })
-//}());
