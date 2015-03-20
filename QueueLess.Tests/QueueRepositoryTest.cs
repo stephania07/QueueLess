@@ -14,7 +14,7 @@ namespace QueueLess.Tests
         [ClassInitialize]
         public static void SetUp(TestContext _context)
         {
-            repo = new QueueRepository();
+            repo = new QueueRepository("Name = QueueTest");
             repo.Clear();
         }
 
@@ -33,7 +33,7 @@ namespace QueueLess.Tests
         [TestMethod]
         public void TestAddToDatabase()
         {
-            Assert.AreEqual(2, repo.GetCount());
+            Assert.AreEqual(4, repo.GetCount());
             repo.Add(new Queue("Existing", "John", "Robert", "1234567899", "J@gmail.com", "08:00 AM", "08:30 AM", 30, 2));
             Assert.AreEqual(1, repo.GetCount());
         }
@@ -41,7 +41,7 @@ namespace QueueLess.Tests
         [TestMethod]
         public void TestGetCount()
         {
-            Assert.AreEqual(1, repo.GetCount());
+            Assert.AreEqual(0, repo.GetCount());
             repo.Add(new Queue("New", "Andrew", "Rora", "2345678991", "A@gmail.com", "09:00 AM", "10:30 AM", 90, 5));
             Assert.AreEqual(1, repo.GetCount());
         }
@@ -59,7 +59,10 @@ namespace QueueLess.Tests
         {
             repo.Add(new Queue("New", "Ann", "Robert", "3456789912", "An@gmail.com", "10:00 AM", "11:30 AM", 90, 4));
             repo.Add(new Queue("New", "Andrew", "Rora", "2345678991", "A@gmail.com", "09:00 AM", "10:30 AM", 90, 5));
-            Assert.AreEqual(2, repo.GetCount());
+            repo.Add(new Queue("Existing", "John", "Robert", "1234567899", "J@gmail.com", "08:00 AM", "08:30 AM", 30, 2));
+            repo.Add(new Queue("Existing", "Franklin","John", "5678991234","Fj@gmail.com","12:00 AM","12:45 AM", 45, 4 ));
+
+            Assert.AreEqual(4, repo.GetCount());
         }
 
         //[TestMethod]

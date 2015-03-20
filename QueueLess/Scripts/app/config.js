@@ -3,19 +3,29 @@
     angular.module('QueueLess')
     .config(function($routeProvider){
         $routeProvider.when('/', {
-            templateUrl: 'Static/Index.html'
+            templateUrl: 'Static/View/Home.html'
         });
 
-        $routeProvider.when('/JoinQueue', {
-            templateUrl: 'Static/JQueue.html',
+        //$routeProvider.when('/login', {
+        //    templateUrl: 'Static/View/login.html',
+        //    controller: 'LoginController'
+        //});
+
+        //$routeProvider.when('/register', {
+        //    templateUrl: 'Static/View/signup.html',
+        //    controller: 'SignupController'
+        //});
+
+          $routeProvider.when('/JoinQueue', {
+            templateUrl: 'Static/View/JQueue.html',
             controller: 'AddQueueController'
-        })
+          });
 
            $routeProvider.when('/ShowQueue', {
-                templateUrl: 'Static/SQueue.html',
+                templateUrl: 'Static/View/SQueue.html',
                 controller: 'AddQueueController'
             })
-        .otherwise({redirectTo: '/home'});
+        .otherwise({redirectTo: '/Index'});
       })
 }());
 

@@ -8,7 +8,7 @@ namespace QueueLess.Controllers
 {
     public class HomeController : Controller
     {
-        //GET: Queue
+        
         public ActionResult Index()
         {
             return View();

@@ -8,6 +8,13 @@ namespace QueueLess.Models
 {
     public class QueueDbContext : DbContext
     {
+
+        public QueueDbContext(string connection ="QueueDbContext") : base(connection)
+        {
+
+        }
         public DbSet<Queue> Queues { get; set; }
+
+        
     }
 }

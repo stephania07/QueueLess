@@ -9,9 +9,11 @@ namespace QueueLess.Repository
 {
     interface IQueueRepository
     {
+        IEnumerable<Queue> All();
+        Queue GetById(int id);
         int GetCount();
         void Add(Queue P);
-        void Delete(Queue P);
+        void Delete(int id);
         void Clear();
     }
 }
