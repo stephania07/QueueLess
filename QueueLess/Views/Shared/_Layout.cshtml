@@ -25,14 +25,13 @@
     </div>
 
 
-    <script src="~/Scripts/angular.js"></script>
-    <script src="~/Scripts/angular-route.js"></script>
+    @Scripts.Render("~/Scripts/angular.js")
+    @Scripts.Render("~/Scripts/angular-route.js")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/angular-resource.js")
     @RenderSection("scripts", required: false)
-    <script src="~/Scripts/app/main.js"></script>
     @Scripts.Render("~/Scripts/app/config.js")
-    <script src="~/Scripts/app/queueRepository.js"></script>
+    @Scripts.Render("~/Scripts/app/queueRepository.js")
 </body>
 </html>

@@ -1,13 +1,15 @@
 ﻿angular.module('QueueLess')
     .factory('queueRepository', function ($resource) {
-        return {
-            get: function(){
-                return $resource('/api/queue').query();
-            },
+        return $resource('/api/queue/:id');
 
-            submit: function(queue){
-                return $resource('/api/queue').submit(queue);
-            }
-        }
 
-    });
+        //    get: function(){
+        //        return $resource('/api/queue').queue();
+        // },
+
+        //submit: function(queue){
+        //    return $resource('/api/queue').submit(queue);
+        //}
+    
+
+});

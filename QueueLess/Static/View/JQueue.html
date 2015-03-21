@@ -1,34 +1,33 @@
-﻿<form class="form-horizontal" name="queueForm" ng-submit="submit()">
+﻿<form class="form-horizontal" name="queueForm" ng-submit="save()">
     <div class="form-group">
-        <!--<p ng-model="queue.firstname"> {{queue.firstname}}</p> trial-->
         <label class="col-sm-2 control-label">Service</label>
-        <select>
-            <option>New</option>
-            <option>Existing</option>
+        <select ng-model="queue.Service">
+            <option value="new">New</option>
+            <option value="exisiting">Existing</option>
         </select>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">First Name</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" ng-model="FirstName" />
+            <input type="text" class="form-control" ng-model="queue.FirstName" />
         </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Last Name</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" ng-model="LastName" />
+            <input type="text" class="form-control" ng-model="queue.LastName" />
         </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Email</label>
         <div class="col-sm-6">
-            <input type="email" class="form-control" ng-model="Email" />
+            <input type="email" class="form-control" ng-model="queue.Email" />
         </div>
     </div>
     <div class="form-group">
         <label class="col-sm-2 control-label">Phone Number</label>
         <div class="col-sm-6">
-            <input type="number" class="form-control" ng-model="PhoneNumber" />
+            <input type="number" class="form-control" ng-model="queue.PhoneNumber" />
         </div>
     </div>
     <div class="log">
