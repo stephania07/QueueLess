@@ -12,8 +12,8 @@ namespace QueueLess
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var jsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            //var jsonFormatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            //jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
             
             // Web API routes

@@ -12,7 +12,7 @@ namespace QueueLess.Repository
         public QueueDbContext _dbContext;
         private List<Queue> queues = new List<Queue>();
 
-        public QueueRepository(string connection="QueueTest")
+        public QueueRepository(string connection="QueueDbContext")
         {
             _dbContext = new QueueDbContext(connection);
             _dbContext.Queues.Load();

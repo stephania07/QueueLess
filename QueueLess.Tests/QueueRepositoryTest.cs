@@ -65,16 +65,17 @@ namespace QueueLess.Tests
             Assert.AreEqual(4, repo.GetCount());
         }
 
-        //[TestMethod]
-        //public void TestDelete()
-        //{
-        //    List<Queue> customers = repo.All();
-        //    Assert.AreEqual(2, customers.Count);
-        //    var firstCustomerId = customers[0].ID;
-        //    repo.Delete(firstCustomerId);
-        //    List<Queue> newCustomersList = repo.All();
-        //    Assert.AreEqual(1, repo.GetCount());
-        //}
+        [TestMethod]
+        public void TestDelete()
+        {
+            //List<Queue> customers = repo.All();
+            //Assert.AreEqual(2, customers.Count);
+            //var firstCustomerId = customers[0].ID;
+            //repo.Delete(firstCustomerId);
+            //List<Queue> newCustomersList = repo.All();
+            //Assert.AreEqual(1, repo.GetCount());
+
+        }
                 
     }
 }

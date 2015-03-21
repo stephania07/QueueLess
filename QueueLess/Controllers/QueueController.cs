@@ -42,7 +42,7 @@ namespace QueueLess.Controllers
 
         //GET :/api/Queue?Service=Service
         [HttpGet]
-        [Route("{service}")]
+        [Route("Service/{service}")]
         public IEnumerable<Queue> GetByService(string service)
         {
             return repo.All().Where(
@@ -51,23 +51,23 @@ namespace QueueLess.Controllers
 
         //POST: /api/Queue
         [HttpPost]
-        [Route("{id}")]
+        [Route("")]
         public HttpResponseMessage PostQueue(Queue queue)
         {
             repo.Add(queue);
-            return Request.CreateResponse(HttpStatusCode.Created);
+            return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        //PUT:/api/Queue
+        //PUT:/api/Queue/ID
         [HttpPut]
-        [Route("Queue/update{id}")]
+        [Route("Queue/update/{id}")]
         public HttpResponseMessage UpdateQueue(Queue queue)
         {
             repo.Edit(queue);
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        //DELETE: api/Queue/Delete
+        //DELETE: api/Queue/Delete/ID
         [HttpDelete]
         [Route("")]
         public HttpResponseMessage DeleteQueue(int id)

@@ -13,6 +13,10 @@ namespace QueueLess.Models
         {
 
         }
+        public QueueDbContext() 
+        { 
+   
+        }
         public DbSet<Queue> Queues { get; set; }
 
         
