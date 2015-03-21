@@ -217,18 +217,20 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\config.js" />
     <Content Include="Scripts\app\main.js" />
-    <Content Include="Scripts\app\services\AddQueueController.js" />
-    <Content Include="Scripts\app\services\ShowQueueController.js" />
+    <Content Include="Scripts\app\queueRepository.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -245,7 +247,6 @@
     <Content Include="Static\Includes\footer.html" />
     <Content Include="Static\Includes\header.html" />
     <Content Include="Static\View\JQueue.html" />
-    <Content Include="Static\View\login.html" />
     <Content Include="Static\View\SQueue.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -286,6 +287,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Images\" />
+    <Folder Include="Scripts\app\services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

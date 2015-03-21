@@ -1,4 +1,4 @@
-﻿; (function () {
-    'use strict';
-    angular.module('QueueLess', ['ngRoute'])
-}());
+﻿//; (function () {
+//    'use strict';
+//    angular.module('QueueLess', ['ngRoute'])
+//}());
