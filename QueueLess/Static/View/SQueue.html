@@ -4,11 +4,11 @@
             <tr class="form-group">
                 <label class="col-sm-1">Service</label>
                 <div class="col-sm-2">
-                    <select ng-model="queue.Service" class="form-control">
+                    <select ng-model="queue.Service" class="form-control" >
                         <option value="new">New</option>
                         <option value="exisiting">Existing</option>
                     </select>
-                    <button class="btn-primary btn-sm">Filter</button>
+                    <button class="btn-primary btn-sm" ng-click="filter()">Filter</button>
                 </div>
             </tr>
             <thead>

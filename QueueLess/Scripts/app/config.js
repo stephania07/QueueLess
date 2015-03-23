@@ -23,7 +23,20 @@
         $scope.queuecount = queueRepository.query();
 })
 
- 
+    //counts by service = to be revised
+.controller('servicecountCtrl', function ($scope, queueRepository) {
+    $scope.queueservice = queueRepository.query();
+})
+
+   //delete To be revised
+.controller('ShowQueueController', function ($scope, queueRepository, $location) {
+    $scope.queues = queueRepository.query();
+
+    $scope.delete = function () {
+        queueRepository.delete();
+        $location.url("/ShowQueue");
+    }
+})
 
 
 
