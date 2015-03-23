@@ -4,7 +4,7 @@
             <tr class="form-group">
                 <label class="col-sm-1">Service</label>
                 <div class="col-sm-2">
-                    <select ng-model="queue.Service" class="form-control" >
+                    <select class="form-control">
                         <option value="new">New</option>
                         <option value="exisiting">Existing</option>
                     </select>
@@ -38,12 +38,12 @@
                     <td>{{ queue.EstimatedMinutes }}</td>
                     <td>{{ queue.PeopleOnQueue }}</td>
                     <td>
-                        <button class="btn btn-info btn-sm" ng-click="edit()">
+                        <button class="btn btn-info btn-sm" ng-click="edit(queue.ID)">
                             <span class="glyphicon glyphicon-pencil"></span>  Edit
                         </button>
                     </td>
                     <td>
-                        <button class="btn btn-warning btn-sm" ng-click="delete()">
+                        <button class="btn btn-warning btn-sm" ng-click="delete(queue.ID)">
                             <span class="glyphicon glyphicon-trash "></span>  Delete
                         </button>
                     </td>

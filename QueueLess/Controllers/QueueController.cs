@@ -19,6 +19,7 @@ namespace QueueLess.Controllers
         private QueueRepository repo = new QueueRepository();
 
         //GET: /api/queue
+     
         [HttpGet]
         [Route("")]
         public List<Queue> GetAllQueues()
@@ -58,16 +59,16 @@ namespace QueueLess.Controllers
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        //PUT:/api/Queue/ID
+        //PUT:/api/queue/id
         [HttpPut]
-        [Route("{id}/edit")]
+        [Route("{id}")]
         public HttpResponseMessage UpdateQueue(Queue queue)
         {
             repo.Edit(queue);
             return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
-        //DELETE: api/Queue/Delete/ID
+        //DELETE: api/queue/id
         [HttpDelete]
         [Route("{id}")]
         public HttpResponseMessage DeleteQueue(int id)

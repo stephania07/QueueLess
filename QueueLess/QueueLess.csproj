@@ -235,6 +235,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Static\View\DQueue.html" />
+    <Content Include="Static\View\EQueue.html" />
     <Content Include="Static\View\Home.html" />
     <Content Include="Static\Includes\footer.html" />
     <Content Include="Static\Includes\header.html" />
