@@ -25,9 +25,10 @@ namespace QueueLess.Models
         public string PhoneNumber { get; set; }
 
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name="Email")]
         [EmailAddress]
         public string Email { get; set; }
+
         public string RegistrationTime { get; set; }
         public string CurrentTime { get; set; }
         public int EstimatedMinutes { get; set; }

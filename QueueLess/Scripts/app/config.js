@@ -18,26 +18,25 @@
     $scope.queues = queueRepository.query();
 })
 
-    //To be revised
-.controller('ShowQueueController', function ($scope, queueRepository, $location) {
-    $scope.queues = queueRepository.query();
-
-    $scope.delete = function () {
-        queueRepository.delete($scope.queue);
-        $location.url("/JoinQueue");
-    }
-})
-
-        //counts the queue
+    //counts the queue
 .controller('queueCountCtrl', function ($scope, queueRepository) {
         $scope.queuecount = queueRepository.query();
 })
 
-    //counts by category/service = to be revised
+    //counts by service = to be revised
 .controller('serviceCountCtrl', function ($scope, queueRepository) {
     $scope.queueservice = queueRepository.query();
-    })
+ })
 
+   //delete To be revised
+.controller('ShowQueueController', function ($scope, queueRepository, $location) {
+    $scope.queues = queueRepository.query();
+
+    $scope.delete = function () {
+        queueRepository.delete();
+        $location.url("/ShowQueue");
+    }
+})
 
 
 

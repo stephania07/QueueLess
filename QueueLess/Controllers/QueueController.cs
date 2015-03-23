@@ -13,12 +13,12 @@ namespace QueueLess.Controllers
 {   
     //http://www.asp.net/web-api/overview/older-versions/creating-a-web-api-that-supports-crud-operations
     
-    [RoutePrefix("api/Queue")]
+    [RoutePrefix("api/queue")]
     public class QueueController : ApiController
     {
         private QueueRepository repo = new QueueRepository();
 
-        //GET: /api/Queue
+        //GET: /api/queue
         [HttpGet]
         [Route("")]
         public List<Queue> GetAllQueues()
@@ -29,7 +29,7 @@ namespace QueueLess.Controllers
              return queues;
         }
 
-        //GET: /api/Queue/id
+        //GET: /api/queue/id
         [HttpGet]
         [Route("{id}")]
         public System.Web.Mvc.JsonResult GetQueue(int id)
@@ -40,9 +40,9 @@ namespace QueueLess.Controllers
             return json;
         }
 
-        //GET :/api/Queue?Service=Service
+        //GET :/api/queue?Service=Service
         [HttpGet]
-        [Route("Service/{service}")]
+        [Route("{id}/{Service}")]
         public IEnumerable<Queue> GetByService(string service)
         {
             return repo.All().Where(
@@ -60,7 +60,7 @@ namespace QueueLess.Controllers
 
         //PUT:/api/Queue/ID
         [HttpPut]
-        [Route("Queue/update/{id}")]
+        [Route("{id}/edit")]
         public HttpResponseMessage UpdateQueue(Queue queue)
         {
             repo.Edit(queue);
@@ -69,7 +69,7 @@ namespace QueueLess.Controllers
 
         //DELETE: api/Queue/Delete/ID
         [HttpDelete]
-        [Route("")]
+        [Route("{id}")]
         public HttpResponseMessage DeleteQueue(int id)
         {
             repo.Delete(id);

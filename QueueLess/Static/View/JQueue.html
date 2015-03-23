@@ -2,8 +2,8 @@
     <div class="col-lg-6">
         <label><strong>New Customers</strong></label>
         <div ng-controller="queueCountCtrl">Number of Customers {{queuecount.length}}  are ahead </div>
-        <div ng-controller="serviceCountCtrl">Number of New Customers {{queueservice.length}}  are ahead </div>
-        <p> The minutes you have to wait is__ {{queue.EstimatedMinutes}}</p>
+        <!--<div ng-controller="serviceCountCtrl">Number of New Customers {{queueservice.length}}  are ahead </div>-->
+        <p> The minutes you have to wait is__ </p>
     </div>
      <div class="col-lg-offset-6">
         <label> Existing Customers</label>
@@ -43,7 +43,7 @@
     <div class="form-group">
         <label class="col-sm-2 control-label">Email</label>
         <div class="col-sm-6">
-            <input type="email" class="form-control" ng-model="queue.Email" required ng-pattern="/^[a-zA-z0-9'._%+-]+@[a-zA-z0-9-][a-zA-z0-9.-]*\.{a-zA-Z]{2,9}$/" />
+            <input type="email" class="form-control" ng-model="queue.Email" required/>
             <div class="text-danger" ng-show="queueForm.Email.$error.required && queueForm.Email.$dirty">
                 Please enter valid email
             </div>
@@ -59,9 +59,9 @@
         </div>
     </div>
     <div class="col-lg-offset-3">
-    
-        <input type="submit" class="btn btn-primary col-sm-2" value="Submit" ng-class="{disabled: queueForm.$invalid}" />
-    
+
+        <input type="submit" class="btn btn-primary col-sm-2" value="Submit" ng-class="{disabled: queueForm.$invalid}"  />
+
     </div>
 </form>
 
