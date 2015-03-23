@@ -4,7 +4,8 @@
             <tr class="form-group">
                 <label class="col-sm-1">Service</label>
                 <div class="col-sm-2">
-                    <select class="form-control">
+                    <select ng-model="Sfilter" class="form-control">
+                        <option value="">All</option>
                         <option value="new">New</option>
                         <option value="exisiting">Existing</option>
                     </select>
@@ -27,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="queue in queues">
+                <tr ng-repeat="queue in queues | filter : Sfilter">
                     <td>{{ queue.service }}</td>
                     <td>{{ queue.FirstName }}</td>
                     <td>{{ queue.LastName }}</td>
