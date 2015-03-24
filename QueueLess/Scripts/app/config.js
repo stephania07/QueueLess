@@ -41,9 +41,21 @@
 })
 
     //counts by service
-.controller('servicecountCtrl', function ($scope, queueRepository) {
+.controller('ServiceCtrl', function ($scope, queueRepository) {
     $scope.queueservice = queueRepository.query();
-
+    
+    if (queue.Service.value === "new" || queue.Service.value === "New")
+    {
+        return queueservice * 20;
+    }
+    if (queue.Service.value === "existing" || queue.Service.value === "Existing")
+    {
+        return queueservice * 15;
+    }
+    else
+    {
+        return null;
+    }
 })
 
 

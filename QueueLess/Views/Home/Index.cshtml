@@ -1,29 +1,10 @@
-﻿@model QueueLess.Models.Queue
-@{
+﻿@{
     ViewBag.Title = "Home Page";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-
 }
 
 <div class="container">
-    <p>QLess is a phone-app that keeps track of the minutes to wait and  the number of customers ahead of you to get served.</p>
-    <div class="row">
-      <div class="navbar navbar-default">
-        <div class="navbar-header">
-            <ul class="nav navbar-nav">
-                <li><span class="navbar-brand"></span></li>
-            </ul>
-            </div>
-           <div class="navbar-collapse collapse">
-            <ul>
-                <li><a href="/#/JoinQueue"> Join Queue </a> ||</li>
-                <li><a href="/#/ShowQueue"> Show Queue </a></li>      
-            </ul>
-          </div>
-         </div>
-        </div>
-      <div class="container container-fluid-content">
+     
       <div ng-view></div>
-    </div>
-</div>
+ </div>
+
     
