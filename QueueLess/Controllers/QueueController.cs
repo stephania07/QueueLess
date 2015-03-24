@@ -41,7 +41,7 @@ namespace QueueLess.Controllers
             return json;
         }
 
-        //GET :/api/queue?Service=Service
+        //GET :/api/queue/id/service
         [HttpGet]
         [Route("{id}/{Service}")]
         public IEnumerable<Queue> GetByService(string service)
@@ -50,7 +50,7 @@ namespace QueueLess.Controllers
                 p => string.Equals(p.Service, service, StringComparison.OrdinalIgnoreCase));
         }
 
-        //POST: /api/Queue
+        //POST: /api/queue
         [HttpPost]
         [Route("")]
         public HttpResponseMessage PostQueue(Queue queue)

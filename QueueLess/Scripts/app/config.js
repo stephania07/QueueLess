@@ -40,7 +40,7 @@
 
 })
 
-    //counts by service = to be revised
+    //counts by service
 .controller('servicecountCtrl', function ($scope, queueRepository) {
     $scope.queueservice = queueRepository.query();
 

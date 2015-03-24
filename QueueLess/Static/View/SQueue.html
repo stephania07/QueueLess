@@ -8,8 +8,7 @@
                         <option value="">All</option>
                         <option value="new">New</option>
                         <option value="exisiting">Existing</option>
-                    </select>
-                    <button class="btn-primary btn-sm" ng-click="filter()">Filter</button>
+                     </select> 
                 </div>
             </tr>
             <thead>
@@ -29,7 +28,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="queue in queues | filter : Sfilter">
-                    <td>{{ queue.service }}</td>
+                    <td>{{ queue.Service }}</td>
                     <td>{{ queue.FirstName }}</td>
                     <td>{{ queue.LastName }}</td>
                     <td>{{ queue.PhoneNumber }}</td>
