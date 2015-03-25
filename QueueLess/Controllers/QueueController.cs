@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Web.Http;
 using QueueLess.Repository;
 using QueueLess.Models;
+using Twilio;
 
 
 
@@ -22,7 +23,7 @@ namespace QueueLess.Controllers
      
         [HttpGet]
         [Route("")]
-        public List<Queue> GetAllQueues()
+        public List<QueueLess.Models.Queue> GetAllQueues()
         {
              //return repo.GetAll();
              List<Models.Queue> queues = new List<Models.Queue>();
@@ -44,14 +45,14 @@ namespace QueueLess.Controllers
         //GET :/api/queue/id/service
         [HttpGet]
         [Route("{id}/{Service}")]
-        public IEnumerable<Queue> GetByService(string service)
+        public IEnumerable<QueueLess.Models.Queue> GetByService(string service)
         {
             return repo.All().Where(
                 p => string.Equals(p.Service, service, StringComparison.OrdinalIgnoreCase));
         }
         [HttpGet]
         [Route ("{id}/New")]
-        public List<Queue> GetByNew()
+        public List<QueueLess.Models.Queue> GetByNew()
         {
              return repo.GetNew();
             
@@ -63,16 +64,28 @@ namespace QueueLess.Controllers
         //POST: /api/queue
         [HttpPost]
         [Route("")]
-        public HttpResponseMessage PostQueue(Queue queue)
+        public HttpResponseMessage PostQueue(QueueLess.Models.Queue queue)
         {
+            
             repo.Add(queue);
-            return new HttpResponseMessage(HttpStatusCode.OK);
+            string AccountSid = "ACcb670e71395fcf1b0132d004b46ea478";
+            string AuthToken = "{{ auth_token }}";
+
+            var twilio = new TwilioRestClient(AccountSid, AuthToken);
+            var message = twilio.SendMessage("+14158141829", "+12025693450", "Jenny please?! I love you <3", "");
+            
+           return new HttpResponseMessage(HttpStatusCode.OK);
+            
+
+            // Find your Account Sid and Auth Token at twilio.com/user/account
+            
+
         }
 
         //PUT:/api/queue/id
         [HttpPut]
         [Route("{id}")]
-        public HttpResponseMessage UpdateQueue(Queue queue)
+        public HttpResponseMessage UpdateQueue(QueueLess.Models.Queue queue)
         {
             repo.Edit(queue);
             return new HttpResponseMessage(HttpStatusCode.OK);
