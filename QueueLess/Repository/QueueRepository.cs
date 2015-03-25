@@ -23,10 +23,7 @@ namespace QueueLess.Repository
             return qu.ToList<Models.Queue>();
         }
 
-        //public IEnumerable<Queue> GetAll()
-        //{
-        //    return queues;
-        //}
+      
 
         public Queue GetById(int id)
         {
