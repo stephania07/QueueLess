@@ -49,6 +49,16 @@ namespace QueueLess.Controllers
             return repo.All().Where(
                 p => string.Equals(p.Service, service, StringComparison.OrdinalIgnoreCase));
         }
+        [HttpGet]
+        [Route ("{id}/New")]
+        public List<Queue> GetByNew()
+        {
+             return repo.GetNew();
+            
+
+        }
+
+
 
         //POST: /api/queue
         [HttpPost]

@@ -1,16 +1,15 @@
 ﻿<div >
     <div class="col-lg-6">
         <label><strong>New Customers</strong></label>
-        <div ng-controller="queueCountCtrl">Number of Customers ahead are {{queuecount.length}} </div>
-        <!--<div ng-controller="ServiceCtrl">Number of New Customers {{queueservice.length}}  are ahead </div>
-        <p> The minutes you have to wait is__ </p>-->
-        <div ng-controller="queueCountCtrl">The minutes to wait is {{queuecount.length * 20}} minutes </div>
+        <div >Number of Customers ahead are {{new}} </div>
+        
+        <div>The minutes to wait is {{new * 20}} minutes </div>
 
     </div>
      <div class="col-lg-offset-6">
         <label> Existing Customers</label>
-        <p> There are __  customers ahead of you!</p>
-         <div ng-controller="queueCountCtrl">The minutes to wait is {{queuecount.length * 15}} minutes </div>
+        <p> There are {{existing}} customers ahead of you!</p>
+         <div>The minutes to wait is {{existing * 15}} minutes </div>
     </div>
 </div>
 <br />

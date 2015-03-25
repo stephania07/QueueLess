@@ -243,6 +243,7 @@
     <Content Include="Static\Includes\footer.html" />
     <Content Include="Static\Includes\header.html" />
     <Content Include="Static\View\JQueue.html" />
+    <Content Include="Static\View\RQueue.html" />
     <Content Include="Static\View\SQueue.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

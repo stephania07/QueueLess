@@ -65,7 +65,17 @@ namespace QueueLess.Repository
             var a = this.All();
             _dbContext.Queues.RemoveRange(a);
         }
-       
-        
+
+
+
+        internal List<Queue> GetNew()
+        {
+            var query = from Queue in _dbContext.Queues
+                        where Queue.Service == "New"
+                        select Queue;
+            return query.ToList<Queue>();
+
+
+        }
     }
 }
