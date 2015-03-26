@@ -67,21 +67,30 @@ namespace QueueLess.Controllers
             
             repo.Add(queue);
             // Find your Account Sid and Auth Token at twilio.com/user/account
-            string AccountSid = ConfigurationManager.AppSettings["ACcb670e71395fcf1b0132d004b46ea478"];
-            string AuthToken = ConfigurationManager.AppSettings["2c182adb1c84501d546aa72e1b42568f"];
+            string AccountSid = "AC465dea63a4443cfbf0dfaf79c2c51332";
+            string AuthToken = "c93cbe8364424833d25272141bb80ea1";
+            //string MessageC;
+   
+            //if (queue)
+            //{
+            //    var p = "{{ queueLength }}";
+            //    var t = "{{queueLength * 20 }}";
+            //    MessageC = "You are the " + p + "person in the queue." +  t + "minutes are left for you.";
+            //   // MessageC = "You are the {{queueLength}}person on queue.  {{queueLength * 20}} minutes are left for you.";
+            //}
+            // else
+            // {
+            //    MessageC = "You are the {{queueLength}}person on queue.  {{queueLength * 15}} minutes are left for you.";
+            // }
+                        
+
 
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
-            var message = twilio.SendSmsMessage("+14108073125", "+12025693450", "Hello");
-
-            //if (message.RestException != null)
-            //{
-            //    var error = message.RestException.Message;
-            //    // return ;
-            //}
-            //else
-            //{
-                return new HttpResponseMessage(HttpStatusCode.OK);
-            //}
+            var clientP = "+1" + queue.PhoneNumber;
+            var message = twilio.SendSmsMessage("+14108073191", clientP, "WellCome to NSS"); 
+    
+            
+                return new HttpResponseMessage(HttpStatusCode.OK);         
         }
 
         //PUT:/api/queue/id
