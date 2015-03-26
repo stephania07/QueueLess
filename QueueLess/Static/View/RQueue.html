@@ -1,5 +1,4 @@
 ﻿<div>
-    <p>You are the ___ person on queue.  ___ minutes are left for you.</p>
+    <p ng-show="newQueue">You are the {{queueLength}}person on queue.  {{queueLength * 20}} minutes are left for you.</p>
+    <p ng-hide="newQueue">You are the {{queueLength}}person on queue.  {{queueLength * 15}} minutes are left for you.</p>
 </div>
-<div >Number of {{currentQueue.Service}}  customers are ahead </div>
-<!--<p> The minutes you have to wait is {{ * 20}} </p>-->

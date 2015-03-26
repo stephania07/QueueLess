@@ -6,8 +6,8 @@
                 <div class="col-sm-2">
                     <select ng-model="Sfilter" class="form-control">
                         <option value="">All</option>
-                        <option value="new">New</option>
-                        <option value="exisiting">Existing</option>
+                        <option value="New">New</option>
+                        <option value="Exisiting">Existing</option>
                      </select> 
                 </div>
             </tr>
@@ -18,10 +18,10 @@
                     <th>Last Name</th>
                     <th>Phone Number</th>
                     <th>Email</th>
-                    <th>Registration Time</th>
-                    <th>Current Time</th>
+                    <!--<th>Registration Time</th>
+                    <th>Current Time</th>-->
                     <th>Estimated Minutes</th>
-                    <th>People on Queue</th>
+                    <!--<th>People on Queue</th>-->
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
@@ -33,10 +33,10 @@
                     <td>{{ queue.LastName }}</td>
                     <td>{{ queue.PhoneNumber }}</td>
                     <td>{{ queue.Email }}</td>
-                    <td>{{ queue.RegistrationTime }}</td>
-                    <td>{{ queue.CurrentTime }}</td>
+                    <!--<td>{{ queue.RegistrationTime }}</td>
+                    <td>{{ queue.CurrentTime }}</td>-->
                     <td>{{ queue.EstimatedMinutes }}</td>
-                    <td>{{ queue.PeopleOnQueue }}</td>
+                    <!--<td>{{ queue.PeopleOnQueue }}</td>-->
                     <td>
                         <button class="btn btn-info btn-sm" ng-click="edit(queue.ID)">
                             <span class="glyphicon glyphicon-pencil"></span>  Edit

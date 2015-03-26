@@ -7,6 +7,7 @@ using System.Web.Http;
 using QueueLess.Repository;
 using QueueLess.Models;
 using Twilio;
+using System.Configuration;
 
 
 
@@ -58,9 +59,6 @@ namespace QueueLess.Controllers
             
 
         }
-
-
-
         //POST: /api/queue
         [HttpPost]
         [Route("")]
@@ -68,18 +66,22 @@ namespace QueueLess.Controllers
         {
             
             repo.Add(queue);
-            string AccountSid = "ACcb670e71395fcf1b0132d004b46ea478";
-            string AuthToken = "{{ auth_token }}";
+            // Find your Account Sid and Auth Token at twilio.com/user/account
+            string AccountSid = ConfigurationManager.AppSettings["ACcb670e71395fcf1b0132d004b46ea478"];
+            string AuthToken = ConfigurationManager.AppSettings["2c182adb1c84501d546aa72e1b42568f"];
 
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
-            var message = twilio.SendMessage("+14158141829", "+12025693450", "Jenny please?! I love you <3", "");
-            
-           return new HttpResponseMessage(HttpStatusCode.OK);
-            
+            var message = twilio.SendSmsMessage("+14108073125", "+12025693450", "Hello");
 
-            // Find your Account Sid and Auth Token at twilio.com/user/account
-            
-
+            //if (message.RestException != null)
+            //{
+            //    var error = message.RestException.Message;
+            //    // return ;
+            //}
+            //else
+            //{
+                return new HttpResponseMessage(HttpStatusCode.OK);
+            //}
         }
 
         //PUT:/api/queue/id

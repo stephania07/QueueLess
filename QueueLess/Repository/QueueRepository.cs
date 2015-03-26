@@ -77,5 +77,23 @@ namespace QueueLess.Repository
 
 
         }
+
+        //protected void Page_Load(object sender, EventArgs e)
+        //{
+        //    string From = Request["From"];
+        //    string To = Request["To"];
+        //    string Body = Request["Body"];
+
+        //    if (Body == "M")
+        //    {
+        //        var text = "30 more minutes is given you";
+        //        return text;
+        //    }
+        //    else 
+        //    {
+        //        return "Sorry To see you leave";
+            
+        //    }
+        //}
     }
 }
