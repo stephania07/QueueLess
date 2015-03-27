@@ -55,9 +55,7 @@ namespace QueueLess.Controllers
         [Route ("{id}/New")]
         public List<QueueLess.Models.Queue> GetByNew()
         {
-             return repo.GetNew();
-            
-
+             return repo.GetNew();         
         }
         //POST: /api/queue
         [HttpPost]
@@ -82,12 +80,10 @@ namespace QueueLess.Controllers
             // {
             //    MessageC = "You are the {{queueLength}}person on queue.  {{queueLength * 15}} minutes are left for you.";
             // }
-                        
-
 
             var twilio = new TwilioRestClient(AccountSid, AuthToken);
             var clientP = "+1" + queue.PhoneNumber;
-            var message = twilio.SendSmsMessage("+14108073191", clientP, "WellCome to NSS"); 
+            var message = twilio.SendSmsMessage("+14108073191", clientP, "Yeaa we made it this far.. Congratulation! And you r my first customer on my new app...guess who??"); 
     
             
                 return new HttpResponseMessage(HttpStatusCode.OK);         

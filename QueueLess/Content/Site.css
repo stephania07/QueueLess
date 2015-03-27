@@ -1,13 +1,44 @@
 ﻿body {
     padding-top: 80px;
     padding-bottom: 20px;
+    background: url(../Images/7.jpg)no-repeat;
+    background-size: cover;
+    font-family: Garamond;
+    font-size: 19px;
+    color: black;
+}
+
+h2, h4 
+{
+    font-family: cursive;
+    font-weight: bold;
+}
+.col-lg-6
+ {
+    background-color:InfoBackground;
     
 }
+.col-lg-offset-6 {
+    background-color: InfoBackground;
+    padding-left: 15px;
+}
+.navbar-inverse .navbar-brand {
+    color: lemonchiffon;
+    font-family: bold, cursive;
+    font-size: 20px;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #EDE6E6;
+}
+
+
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -23,3 +54,10 @@ select,
 textarea {
     max-width: 280px;
 }
+/*nav bar*/
+.nav nav-bar {
+font-family: 'Shojumaru', cursive;
+font-size: 20px;
+
+}
+
